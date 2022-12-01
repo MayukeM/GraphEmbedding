@@ -80,9 +80,15 @@ if __name__ == "__main__":
     G = nx.read_edgelist('../data/flight/brazil-airports.edgelist', create_using=nx.DiGraph(), nodetype=None,
                          data=[('weight', int)])
 
-    model = Struc2Vec(G, 10, 80, workers=4, verbose=40, )
-    model.train()
-    embeddings = model.get_embeddings()
+    # 使用plt画出图G
+    # nx.draw(G)
+    # plt.show()  #or
+    # nx.draw(G,node_size=10, font_size=10, font_color="blue", font_weight="bold")
+    # plt.show()
 
-    evaluate_embeddings(embeddings)
-    plot_embeddings(embeddings)
+    # model = Struc2Vec(G, 10, 80, workers=4, verbose=40, )
+    # model.train()
+    # embeddings = model.get_embeddings()
+    #
+    # evaluate_embeddings(embeddings)
+    # plot_embeddings(embeddings)

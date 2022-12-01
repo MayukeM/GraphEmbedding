@@ -48,6 +48,6 @@ if __name__ == "__main__":
     model = DeepWalk(G, walk_length=10, num_walks=80, workers=1)
     model.train(window_size=5, iter=3)
     embeddings = model.get_embeddings()
-
+    print(embeddings[:10])
     evaluate_embeddings(embeddings)
     plot_embeddings(embeddings)
